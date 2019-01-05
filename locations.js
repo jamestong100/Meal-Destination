@@ -1,18 +1,11 @@
 var array = [];
 let i = 0;
-// var places = {
-//   name: "",
-//   location: "",
-//   category: ""
-// };
 
 function addDestination(name, location, category) {
   console.log("test");
-  // places.name = name;
-  // places.location = location;
-  // places.category = category;
   array.push({ name: name, location: location, category: category });
-  addToList(JSON.stringify(array[i]));
+  //addToList(JSON.stringify(array[i]));
+  addToList(array[i]);
   i++;
 }
 
@@ -34,7 +27,20 @@ function randomDestination(cat, loc) {
 
 function addToList(add) {
   var node = document.createElement("li");
-  var textnode = document.createTextNode(add);
-  node.appendChild(textnode);
+  var span1 = document.createElement("span");
+  span1.className = "name";
+  var span2 = document.createElement("span");
+  span2.className = "location";
+  var span3 = document.createElement("span");
+  span3.className = "category";
+  var textnode1 = document.createTextNode(add.name);
+  var textnode2 = document.createTextNode(add.location);
+  var textnode3 = document.createTextNode(add.category);
+  span1.append(textnode1);
+  span2.append(textnode2);
+  span3.append(textnode3);
+  node.appendChild(span1);
+  node.appendChild(span2);
+  node.appendChild(span3);
   document.getElementById("list").appendChild(node);
 }
