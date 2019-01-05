@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courgette", cursive;
+}
+
+body {
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 15px;
+}
+header {
+  background-color: aliceblue;
+  padding: 20px;
+}
+
+header > h1 {
+  color: darkslategray;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  width: 300px;
+}
+
+.fill-width {
+  flex: 1;
+  width: 100%;
+}
+
+ul {
+  padding: 30px;
+}
